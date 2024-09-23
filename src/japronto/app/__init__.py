@@ -196,7 +196,7 @@ class Application:
         if self._debug and not self._log_request:
             self._log_request = self._debug
 
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         sock.bind((host, port))
         os.set_inheritable(sock.fileno(), True)
